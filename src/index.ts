@@ -56,31 +56,23 @@ let sortedNotes: number[] = notes.sort((a, b) => a - b);
 console.log(`Notas ordenadas de menor a mayor: ${sortedNotes}`);
 
 let approveNotes: number[] = [];
-for (let note = 0; note < notes.length; note++) {
-  if (notes[note] >= 5) {
-    approveNotes.push(notes[note]);
+for (let note of notes) {
+  if (note >= 5) {
+    approveNotes.push(note);
   }
 }
 console.log(`Notas aprobadas ${approveNotes}`);
 
 let averageNote: number = 0;
-for (let note = 0; note < notes.length; note++) {
-  averageNote += notes[note];
+for (let note of notes) {
+  averageNote += note;
 }
 averageNote = averageNote / notes.length;
 
 console.log(`La nota media de los alumnos es: ${averageNote}`);
 
-let maximaNote: number = 0;
-let minimumNote: number = 10;
+let maximaNote: number = notes[notes.length - 1];
+let minimumNote: number = notes[0];
 
-for (let note = 0; note < notes.length; note++) {
-  if (notes[note] > maximaNote) {
-    maximaNote = notes[note];
-  }
-  if (notes[note] < minimumNote) {
-    minimumNote = notes[note];
-  }
-}
 console.log(`La nota máxima es: ${maximaNote}`);
 console.log(`La nota mínima es: ${minimumNote}`);
