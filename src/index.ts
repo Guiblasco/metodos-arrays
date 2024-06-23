@@ -1,9 +1,9 @@
 const years: number[] = [];
-let initialYear = 2000;
-const actualYear = 2024;
 
-for (initialYear; initialYear <= actualYear; initialYear++) {
-  years.push(initialYear);
+const currentYear = 2024;
+
+for (let year = 2000; year <= currentYear; year++) {
+  years.push(year);
 }
 console.log(years);
 
@@ -49,38 +49,38 @@ const words = [
 ];
 console.log(words.reverse().join(" "));
 
-let marks: number[] = [];
-marks = [5, 2, 6, 8, 10];
-let orderedMarks: number[] = marks.sort((a, b) => a - b);
+let notes: number[] = [];
+notes = [5, 2, 6, 8, 10];
+let sortedNotes: number[] = notes.sort((a, b) => a - b);
 
-console.log(`Notas ordenadas de menor a mayor: ${orderedMarks}`);
+console.log(`Notas ordenadas de menor a mayor: ${sortedNotes}`);
 
-let passMarks: number[] = [];
-for (let number = 0; number < marks.length; number++) {
-  if (marks[number] >= 5) {
-    passMarks.push(marks[number]);
+let approveNotes: number[] = [];
+for (let note = 0; note < notes.length; note++) {
+  if (notes[note] >= 5) {
+    approveNotes.push(notes[note]);
   }
 }
-console.log(`Notas aprobadas ${passMarks}`);
+console.log(`Notas aprobadas ${approveNotes}`);
 
-let midMark: number = 0;
-for (let number = 0; number < marks.length; number++) {
-  midMark += marks[number];
+let averageNote: number = 0;
+for (let note = 0; note < notes.length; note++) {
+  averageNote += notes[note];
 }
-midMark = midMark / marks.length;
+averageNote = averageNote / notes.length;
 
-console.log(`La nota media de los alumnos es: ${midMark}`);
+console.log(`La nota media de los alumnos es: ${averageNote}`);
 
-let maxMark: number = 0;
-let minMark: number = 10;
+let maximaNote: number = 0;
+let minimumNote: number = 10;
 
-for (let number = 0; number < marks.length; number++) {
-  if (marks[number] > maxMark) {
-    maxMark = marks[number];
+for (let note = 0; note < notes.length; note++) {
+  if (notes[note] > maximaNote) {
+    maximaNote = notes[note];
   }
-  if (marks[number] < minMark) {
-    minMark = marks[number];
+  if (notes[note] < minimumNote) {
+    minimumNote = notes[note];
   }
 }
-console.log(`La nota máxima es: ${maxMark}`);
-console.log(`La nota mínima es: ${minMark}`);
+console.log(`La nota máxima es: ${maximaNote}`);
+console.log(`La nota mínima es: ${minimumNote}`);
